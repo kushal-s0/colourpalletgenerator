@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Extractor Tool</h1>
+        <p class="description">Upload an image to find the most common colors. This tool helps you visualize the dominant colors in your image for inspiration, design, and more!</p>
+        
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Analyze Colors</button>
+        </form>
+
+        {% if colors %}
+            <h2>Most Common Colors</h2>
+            <div class="result">
+                <img src="{{ image_url }}" alt="Uploaded Image" class="uploaded-image">
+                <div class="colors">
+                    {% for color in colors %}
+                        <div class="color-box" style="background-color: {{ color }};">
+                            <p>{{ color }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

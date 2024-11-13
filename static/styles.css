@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.upload-form {
+    margin-bottom: 30px;
+}
+
+.upload-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.upload-form input[type="file"]:hover {
+    border-color: #8fd3f4;
+    background-color: #f1f9ff;
+}
+
+.upload-form button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.uploaded-image {
+    width: 320px;
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.uploaded-image:hover {
+    transform: scale(1.02);
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.color-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
